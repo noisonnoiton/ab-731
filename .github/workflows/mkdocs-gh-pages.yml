@@ -1,0 +1,51 @@
+# main push 시 MkDocs 빌드 -> 같은 repo(ab-731) 의 gh-pages 브랜치에 배포 (GitHub Pages)
+#
+# 준비
+# 1) 이 repo 이름이 정확히 ab-731 이어야 URL 이 https://{owner}.github.io/ab-731/ 가 됩니다.
+# 2) 같은 repo 에 배포하므로 별도 PAT 불필요 - 기본 GITHUB_TOKEN 사용.
+# 3) 최초 배포(gh-pages 브랜치 생성) 후: Settings -> Pages -> Branch: gh-pages / (root)
+
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "mkdocs.yml"
+      - "pyproject.toml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      # Material for MkDocs: MkDocs 2.0 관련 터미널 안내 비활성화
+      NO_MKDOCS_2_WARNING: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install doc dependencies (pyproject.toml, optional docs)
+        run: uv sync --extra docs
+
+      - name: Build MkDocs
+        run: uv run mkdocs build --strict -f mkdocs.yml
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site
+          force_orphan: true

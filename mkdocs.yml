@@ -1,0 +1,95 @@
+# MkDocs config - CI (GitHub Actions) 및 로컬에서 모두 사용
+# 로컬: NO_MKDOCS_2_WARNING=1 uv run mkdocs serve
+# CI:   uv run mkdocs build --strict -f mkdocs.yml
+
+site_name: AB-731 AI Transformation Leader
+site_description: AB-731 (AI Transformation Leader) 시험 대비 강의 자료
+
+# GitHub Project Pages: https://{owner}.github.io/ab-731/
+site_url: https://noisonnoiton.github.io/ab-731/
+
+repo_url: https://github.com/noisonnoiton/ab-731
+edit_uri: ""
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: ko
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: 다크 모드로 전환
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: 라이트 모드로 전환
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - header.autohide
+    - content.code.copy
+    - content.tooltips
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
+      format: svg
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - 소개:
+      - Overview: index.md
+      - 시험 정보: exam/overview.md
+  - 'Domain 1 - 생성형 AI 비즈니스 가치':
+      - Overview: domain1-business-value/index.md
+      - 생성형 AI 기본 개념: domain1-business-value/01-foundations.md
+      - 기능과 활용 (grounding, RAG): domain1-business-value/02-capabilities.md
+  - "Domain 2 - Microsoft AI 앱/서비스":
+      - Overview: domain2-ai-apps-services/index.md
+      - Microsoft 365 Copilot: domain2-ai-apps-services/01-copilot.md
+      - Microsoft Foundry & Foundry Tools: domain2-ai-apps-services/02-foundry.md
+  - 'Domain 3 - 구현 및 도입 전략':
+      - Overview: domain3-implementation-adoption/index.md
+      - Responsible AI: domain3-implementation-adoption/01-responsible-ai.md
+      - AI 도입 계획: domain3-implementation-adoption/02-adoption.md
+  - 참고:
+      - 용어집: glossary.md
+
+plugins:
+  - search
+  - privacy:
+      assets: false
+      links_attr_map:
+        target: _blank
+      links_noopener: true
+
+extra_css:
+  - stylesheets/custom-colors.css
