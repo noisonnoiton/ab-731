@@ -19,30 +19,6 @@ AI 는 사람과 비즈니스에 큰 영향을 주므로, **공정하고 안전�
     - **Transparency**: 시스템이 어떻게/왜 그런 결과를 내는지 설명 가능해야 함.
     - **Accountability**: 최종 책임은 항상 **사람/조직** 에게 있음. AI 에 책임을 전가하지 않음.
 
-```plantuml
-@startuml RAI
-skinparam defaultFontName Sans-Serif
-skinparam roundcorner 8
-skinparam rectangle {
-  BorderColor #4338ca
-  FontColor #312e81
-}
-
-rectangle "Fairness" as F #EEF2FF
-rectangle "Reliability\n& Safety" as R #EDE9FE
-rectangle "Privacy\n& Security" as P #F5F3FF
-rectangle "Inclusiveness" as I #EEF2FF
-rectangle "Transparency" as T #EDE9FE
-rectangle "Accountability" as A #E0E7FF
-
-F -[hidden]right-> R
-R -[hidden]right-> P
-I -[hidden]right-> T
-T -[hidden]right-> A
-F -[hidden]down-> I
-@enduml
-```
-
 ## Governance (거버넌스)
 
 Responsible AI 를 실제로 지키려면 조직 차원의 통제 구조가 필요합니다.

@@ -68,15 +68,15 @@ nav:
   - 소개:
       - Overview: index.md
       - 시험 정보: exam/overview.md
-  - 'Domain 1 - 생성형 AI 비즈니스 가치':
+  - 'Domain 1':
       - Overview: domain1-business-value/index.md
       - 생성형 AI 기본 개념: domain1-business-value/01-foundations.md
       - 기능과 활용 (grounding, RAG): domain1-business-value/02-capabilities.md
-  - "Domain 2 - Microsoft AI 앱/서비스":
+  - "Domain 2":
       - Overview: domain2-ai-apps-services/index.md
       - Microsoft 365 Copilot: domain2-ai-apps-services/01-copilot.md
       - Microsoft Foundry & Foundry Tools: domain2-ai-apps-services/02-foundry.md
-  - 'Domain 3 - 구현 및 도입 전략':
+  - 'Domain 3':
       - Overview: domain3-implementation-adoption/index.md
       - Responsible AI: domain3-implementation-adoption/01-responsible-ai.md
       - AI 도입 계획: domain3-implementation-adoption/02-adoption.md

@@ -7,26 +7,6 @@
 
 ## 이 과정에서 다루는 것
 
-```plantuml
-@startuml AB-731-Domains
-skinparam defaultFontName Sans-Serif
-skinparam roundcorner 8
-skinparam linetype ortho
-skinparam rectangle {
-  BorderColor #4338ca
-  BorderThickness 2
-  FontColor #312e81
-}
-
-rectangle "Domain 1\n생성형 AI\n비즈니스 가치\n(35-40%)" as D1 #EEF2FF
-rectangle "Domain 2\nMicrosoft AI\n앱/서비스\n(35-40%)" as D2 #EDE9FE
-rectangle "Domain 3\n구현 및\n도입 전략\n(20-25%)" as D3 #F5F3FF
-
-D1 -[#4338ca]right-> D2
-D2 -[#7c3aed]right-> D3
-@enduml
-```
-
 | 도메인 | 비중 | 핵심 주제 |
 | --- | --- | --- |
 | [Domain 1](domain1-business-value/index.md) | 35-40% | 생성형 AI 기본 개념, prompt engineering, grounding, RAG, machine learning |

@@ -18,26 +18,6 @@
 !!! note "스킬 측정 기준일"
     아래 기술 영역은 **2026년 7월 22일** 기준 study guide 를 따릅니다. 대부분 GA(정식 출시) 기능을 다루며, 널리 쓰이는 Preview 기능도 나올 수 있습니다.
 
-## 기술 영역 (Skills measured)
-
-```plantuml
-@startuml Skills
-skinparam defaultFontName Sans-Serif
-skinparam roundcorner 8
-skinparam rectangle {
-  BorderColor #4338ca
-  FontColor #312e81
-}
-
-rectangle "Domain 1\n생성형 AI 비즈니스 가치\n35-40%" as D1 #EEF2FF
-rectangle "Domain 2\nMicrosoft AI 앱/서비스\n35-40%" as D2 #EDE9FE
-rectangle "Domain 3\n구현/도입 전략\n20-25%" as D3 #F5F3FF
-
-D1 -down[hidden]-> D2
-D2 -down[hidden]-> D3
-@enduml
-```
-
 ### Domain 1 - 생성형 AI 솔루션의 비즈니스 가치 (35-40%)
 
 - 생성형 AI 의 **기본 개념** 식별
@@ -89,6 +69,6 @@ D2 -down[hidden]-> D3
 - [AB-731 study guide](https://aka.ms/ab731-StudyGuide)
 - [Exam sandbox (시험 환경 체험)](https://aka.ms/examdemo)
 - [Exam prep videos](https://aka.ms/AB731-ExamPrep)
-- [Azure AI Foundry 문서](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+- [Microsoft Foundry 문서](https://learn.microsoft.com/en-us/azure/ai-foundry/)
 - [Microsoft 365 Copilot 문서](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot)
 - [Microsoft Copilot Studio 문서](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)

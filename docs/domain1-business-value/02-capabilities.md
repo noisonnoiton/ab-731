@@ -109,20 +109,42 @@ skinparam rectangle {
   BorderColor #4338ca
   FontColor #312e81
 }
+skinparam frame {
+  BorderColor #6366f1
+  BorderStyle dashed
+  FontColor #4338ca
+}
+
+' 1. 사람(엔지니어/사용자) 추가
+actor "ML 엔지니어 / 비즈니스 담당자" as User #EEF2FF
 
 rectangle "1. 문제 정의\n비즈니스 목표" as A #EEF2FF
-rectangle "2. 데이터 준비\n수집/정제" as B #EDE9FE
-rectangle "3. 학습\nTrain" as C #F5F3FF
-rectangle "4. 평가\nEvaluate" as D #EEF2FF
-rectangle "5. 배포\nDeploy" as E #EDE9FE
+
+' 2~5번 반복 주기를 시각적으로 묶어주는 프레임
+frame "지속적 개선 루프 (CI/CD/CM)" {
+  rectangle "2. 데이터 준비\n수집/정제" as B #EDE9FE
+  rectangle "3. 학습\nTrain" as C #F5F3FF
+  rectangle "4. 평가\nEvaluate" as D #EEF2FF
+  rectangle "5. 배포\nDeploy" as E #EDE9FE
+}
+
 rectangle "6. 모니터링\nMonitor" as F #F5F3FF
 
+' 관계 정의 및 흐름 제어
+User -down-> A : 목표 설정
+
 A -right-> B
+
+' Core 루프 선형 흐름
 B -right-> C
 C -right-> D
 D -right-> E
-E -right-> F
-F -up-> A
+
+' 2~5번 주기적 반복 강조 (배포 후 평가 결과에 따라 다시 데이터 준비/학습으로 이동)
+E .down.> B : [성능 미달 / 데이터 드리프트] 다시 주기적 반복
+E -right-> F : [통과] 상용 운영
+
+F -up-> A : 비즈니스 임팩트 피드백
 @enduml
 ```
 

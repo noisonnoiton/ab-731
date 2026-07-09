@@ -1,6 +1,7 @@
-# Domain 1 - 생성형 AI 솔루션의 비즈니스 가치
+# Domain 1 - Identify the business value of generative AI solutions
 
-**비중 35-40%** - 시험에서 가장 큰 영역입니다. 생성형 AI 의 기본 개념과, 그것이 비즈니스 가치로 이어지는 기능/기법을 다룹니다.
+- **생성형 AI 솔루션의 비즈니스 가치**
+- **비중 35-40%** - 시험에서 가장 큰 영역입니다. 생성형 AI 의 기본 개념과, 그것이 비즈니스 가치로 이어지는 기능/기법을 다룹니다.
 
 ## 이 도메인의 구성
 
@@ -18,4 +19,4 @@
     - fabrication(환각), bias(편향), reliability(신뢰성)는 반드시 관리해야 할 위험입니다.
 
 !!! info "출처"
-    [Microsoft Learn - What is generative AI](https://learn.microsoft.com/en-us/training/paths/introduction-generative-ai/), [Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+    [Microsoft Learn - What is generative AI](https://learn.microsoft.com/en-us/training/paths/introduction-generative-ai/), [Microsoft AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)

@@ -1,6 +1,7 @@
-# Domain 3 - 구현 및 도입 전략
+# Domain 3 - Identify an implementation and adoption strategy for Microsoft’s AI apps and services
 
-**비중 20-25%** - AI 를 조직에 책임감 있게 도입하기 위한 전략, governance, 라이선스를 다룹니다.
+- **구현 및 도입 전략**
+- **비중 20-25%** - AI 를 조직에 책임감 있게 도입하기 위한 전략, governance, 라이선스를 다룹니다.
 
 ## 이 도메인의 구성
 

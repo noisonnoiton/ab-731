@@ -1,6 +1,7 @@
-# Domain 2 - Microsoft AI 앱/서비스의 이점, 기능, 기회
+# Domain 2 - Identify benefits, capabilities, and opportunities for Microsoft’s AI apps and services
 
-**비중 35-40%** - Microsoft 의 AI 제품군을 비즈니스 유스케이스에 매핑하는 능력을 다룹니다.
+- **Microsoft AI 앱/서비스의 이점, 기능, 기회**
+- **비중 35-40%** - Microsoft 의 AI 제품군을 비즈니스 유스케이스에 매핑하는 능력을 다룹니다.
 
 ## 이 도메인의 구성
 
@@ -35,4 +36,4 @@ S -right-> F
     - **Build**: 고유한 요구/제품에 내장 -> **Microsoft Foundry** 로 직접 구축.
 
 !!! info "출처"
-    [Microsoft 365 Copilot](https://learn.microsoft.com/en-us/copilot/microsoft-365/), [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/), [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+    [Microsoft 365 Copilot](https://learn.microsoft.com/en-us/copilot/microsoft-365/), [Copilot Studio](https://learn.microsoft.com/en-us/microsoft-copilot-studio/), [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/)

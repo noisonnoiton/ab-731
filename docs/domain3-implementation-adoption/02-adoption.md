@@ -67,25 +67,46 @@ AI 도입의 성패는 도구가 아니라 **사람과 프로세스** 에 달려
 ## 도입 여정 개요
 
 ```plantuml
-@startuml Adoption
+@startuml AI_Adoption_Journey
 skinparam defaultFontName Sans-Serif
 skinparam roundcorner 8
 skinparam rectangle {
   BorderColor #4338ca
   FontColor #312e81
 }
+skinparam frame {
+  BorderColor #6366f1
+  BorderStyle dashed
+  FontColor #4338ca
+}
 
-rectangle "1. 전략/거버넌스\nAI council" as A #EEF2FF
-rectangle "2. 준비\n데이터/권한 정비,\n라이선스" as B #EDE9FE
-rectangle "3. 파일럿\nadoption team" as C #F5F3FF
-rectangle "4. 확산\nchampions program,\n교육" as D #EEF2FF
-rectangle "5. 측정/개선\nROI, 피드백" as E #E0E7FF
+rectangle "1. 전략 및 거버넌스\n(AI Council 수립)" as A #EEF2FF
+rectangle "2. 과제 발굴 & 기획\n(Adoption Team 구성)" as B #EDE9FE
 
-A -right-> B
-B -right-> C
-C -right-> D
+frame "속도 중심의 검증 (Fast Track)" {
+  rectangle "3. 파일럿 검증\n(최소 라이선스 & 데이터 활용)" as C #F5F3FF
+}
+
+frame "전사 Scale-up & 체계화" {
+  rectangle "4. 기반 인프라 확장\n(전사 데이터/권한 정비)" as D #EEF2FF
+  rectangle "5. 변화 관리 & 교육\n(Champions Program)" as E #EDE9FE
+  rectangle "6. 가치 측정 & 모니터링\n(ROI 평가, 피드백 루프)" as F #E0E7FF
+}
+
+' 흐름 정의
+A -right-> B : 방향성 제시
+B -right-> C : 파일럿 타겟 선정
+
+' 파일럿 성공 후 본격 확장
+C -down-> D : [검증 완료] 전사 전개 결정을 통한 대규모 투자
+
+' 전사 확산 루프
 D -right-> E
-E -up-> A
+E -right-> F
+F .up.> D : [상시 개선] 새로운 현업 요구사항 반영
+
+' 거버넌스로의 피드백
+F -> A : 비즈니스 임팩트 보고 (전략 수정)
 @enduml
 ```
 
