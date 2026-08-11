@@ -116,3 +116,6 @@ F -> A : 비즈니스 임팩트 보고 (전략 수정)
 - 도입 전 **데이터 권한 정비**(over-sharing 방지)가 핵심.
 - Copilot 라이선스: 구독 포함 / 월 구독 / pay-as-you-go.
 - Foundry Tools: **pay-as-you-go** 로 시작, 규모가 크면 **commitment tier**.
+
+!!! info "출처"
+  [Microsoft Copilot Adoption - Adoption planning](https://adoption.microsoft.com/en-us/copilot/), [Microsoft Learn - Microsoft 365 Copilot adoption guide](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-enablement-resources), [Microsoft Learn - Get ready for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-setup), [Microsoft Learn - Microsoft 365 Copilot licensing options](https://learn.microsoft.com/en-us/microsoft-365/copilot/which-copilot-for-your-organization)

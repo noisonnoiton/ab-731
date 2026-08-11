@@ -72,3 +72,6 @@
 - [Microsoft Foundry 문서](https://learn.microsoft.com/en-us/azure/ai-foundry/)
 - [Microsoft 365 Copilot 문서](https://learn.microsoft.com/en-us/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-copilot)
 - [Microsoft Copilot Studio 문서](https://learn.microsoft.com/en-us/microsoft-copilot-studio/)
+
+!!! info "출처"
+    [Microsoft Learn - AB-731 exam page](https://learn.microsoft.com/en-us/credentials/certifications/exams/ab-731/), [Microsoft Learn - Study guide for Exam AB-731](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-731), [Microsoft Learn - Exam scoring and score reports](https://learn.microsoft.com/en-us/credentials/certifications/exam-scoring-reports)

@@ -64,3 +64,6 @@
 - Pretrained 로 시작하고, 필요할 때만 fine-tune.
 - 비용은 **token** 기준, 가치는 **scale/automation** 에서 나옴.
 - fabrication/bias/reliability 는 항상 관리 대상.
+
+!!! info "출처"
+    [Microsoft Learn - Fundamentals of generative AI](https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/), [Microsoft Learn - Get started with Microsoft 365 Copilot](https://learn.microsoft.com/en-us/training/paths/get-started-with-microsoft-365-copilot/), [Microsoft Learn - Study guide for Exam AB-731](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-731#identify-the-business-value-of-generative-ai-solutions-35-40)

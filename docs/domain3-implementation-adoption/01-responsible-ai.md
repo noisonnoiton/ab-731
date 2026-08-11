@@ -49,3 +49,6 @@ Responsible AI 를 실제로 지키려면 조직 차원의 통제 구조가 필�
 - 책임은 항상 **사람**에게 (accountability).
 - **Governance** 로 정책/위험/감사를 제도화.
 - **AI council** 이 전략과 oversight 를 담당.
+
+!!! info "출처"
+    [Microsoft Learn - Responsible AI principles](https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai), [Microsoft - Responsible AI](https://www.microsoft.com/en-us/ai/responsible-ai), [Microsoft Learn - Artificial Intelligence overview](https://learn.microsoft.com/en-us/compliance/assurance/assurance-artificial-intelligence)

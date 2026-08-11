@@ -69,3 +69,6 @@ AB-731 에서 자주 나오는 핵심 용어 정리입니다.
 | **Inclusiveness** | 포용성 - 접근성 |
 | **Transparency** | 투명성 - 설명 가능 |
 | **Accountability** | 책임성 - 사람이 책임 |
+
+!!! info "출처"
+	[Microsoft Learn - Study guide for Exam AB-731](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ab-731), [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview), [Microsoft Learn - Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)

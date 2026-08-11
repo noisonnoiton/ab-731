@@ -98,3 +98,6 @@ Q2 -down-> BU : 고유 요구
 - **Copilot Studio** = low-code 로 커스텀 agent 제작(Extend).
 - **Researcher**(리서치) / **Analyst**(데이터 분석) 구분.
 - 통합 솔루션은 shadow AI 위험을 줄이고 안전/보안을 기본 제공.
+
+!!! info "출처"
+    [Microsoft Learn - Microsoft 365 Copilot overview](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-overview), [Microsoft Learn - Explore prebuilt Microsoft 365 Copilot agents](https://learn.microsoft.com/en-us/training/modules/explore-prebuilt-microsoft-365-copilot-agents/), [Microsoft Learn - Microsoft Copilot Studio documentation](https://learn.microsoft.com/en-us/microsoft-copilot-studio/), [Microsoft Learn - Data, Privacy, and Security for Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy)

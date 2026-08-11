@@ -21,5 +21,5 @@
 4. **Domain 3** - 조직 도입과 responsible AI
 5. [용어집](glossary.md) - 핵심 용어 복습
 
-!!! tip "출처"
+!!! info "출처"
     모든 내용은 [Microsoft Learn](https://learn.microsoft.com/) 공식 문서와 [AB-731 study guide](https://aka.ms/ab731-StudyGuide) 를 기반으로 정리한 **교육용 요약**입니다.
