@@ -80,7 +80,7 @@ F -right-> G
 - 모델 선택은 **작업 유형 + 품질/비용/지연 + 규정** 을 함께 고려.
 
 !!! info "출처"
-  - [Microsoft Learn - Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)
-  - [Microsoft Learn - Foundry Tools](https://learn.microsoft.com/en-us/azure/ai-services/what-are-ai-services)
-  - [Microsoft Learn - Azure AI Search documentation](https://learn.microsoft.com/en-us/azure/search/)
-  - [Microsoft Learn - Model catalog and collections in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/model-catalog-overview)
+    - [Microsoft Learn - Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/)
+    - [Microsoft Learn - Foundry Tools](https://learn.microsoft.com/en-us/azure/ai-services/what-are-ai-services)
+    - [Microsoft Learn - Azure AI Search documentation](https://learn.microsoft.com/en-us/azure/search/)
+    - [Microsoft Learn - Model catalog and collections in Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/model-catalog-overview)
