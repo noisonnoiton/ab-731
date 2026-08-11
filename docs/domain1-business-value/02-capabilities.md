@@ -158,4 +158,6 @@ F -up-> A : 비즈니스 임팩트 피드백
 - 정형 예측/분류에는 전통 **ML** 이 더 적합.
 
 !!! info "출처"
-  [Microsoft Learn - Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering), [Microsoft Learn - Retrieval augmented generation and indexes](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/retrieval-augmented-generation), [Microsoft Learn - Azure Machine Learning documentation](https://learn.microsoft.com/en-us/azure/machine-learning/)
+    - [Microsoft Learn - Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/prompt-engineering)
+    - [Microsoft Learn - Retrieval augmented generation and indexes](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/retrieval-augmented-generation)
+    - [Microsoft Learn - Azure Machine Learning documentation](https://learn.microsoft.com/en-us/azure/machine-learning/)
