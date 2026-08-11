@@ -18,7 +18,7 @@
 
 ```bash
 # uv 사용 (권장)
-uv sync --extra docs
+uv sync --frozen --extra docs
 NO_MKDOCS_2_WARNING=1 uv run mkdocs serve
 
 # 또는 pip

@@ -57,7 +57,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - plantuml_markdown:
-      server: http://www.plantuml.com/plantuml
+      server: https://www.plantuml.com/plantuml
       format: svg
   - attr_list
   - md_in_html

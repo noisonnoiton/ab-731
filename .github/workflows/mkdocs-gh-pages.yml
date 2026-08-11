@@ -14,6 +14,7 @@ on:
       - "docs/**"
       - "mkdocs.yml"
       - "pyproject.toml"
+      - "uv.lock"
   workflow_dispatch:
 
 permissions:
@@ -37,7 +38,7 @@ jobs:
           enable-cache: true
 
       - name: Install doc dependencies (pyproject.toml, optional docs)
-        run: uv sync --extra docs
+        run: uv sync --frozen --extra docs
 
       - name: Build MkDocs
         run: uv run mkdocs build --strict -f mkdocs.yml
