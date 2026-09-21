@@ -1,0 +1,1599 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AB-731 (AI Transformation Leader) 시험 대비 강의 자료">
+      
+      
+      
+        <link rel="canonical" href="https://noisonnoiton.github.io/ab-731/domain3-implementation-adoption/02-adoption/">
+      
+      
+        <link rel="prev" href="../01-responsible-ai/">
+      
+      
+        <link rel="next" href="../../glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>AI 도입 계획 - AB-731 AI Transformation Leader</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom-colors.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-adoption" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="AB-731 AI Transformation Leader" class="md-header__button md-logo" aria-label="AB-731 AI Transformation Leader" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AB-731 AI Transformation Leader
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI 도입 계획
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/noisonnoiton/ab-731" title="저장소로 이동" class="md-source" data-md-component="source" target="_blank" rel="noopener">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  소개
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../domain1-business-value/" class="md-tabs__link">
+          
+  
+  
+  Domain 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../domain2-ai-apps-services/" class="md-tabs__link">
+          
+  
+  
+  Domain 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Domain 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../glossary/" class="md-tabs__link">
+          
+  
+  
+  참고
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AB-731 AI Transformation Leader" class="md-nav__button md-logo" aria-label="AB-731 AI Transformation Leader" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AB-731 AI Transformation Leader
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/noisonnoiton/ab-731" title="저장소로 이동" class="md-source" data-md-component="source" target="_blank" rel="noopener">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    소개
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    소개
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시험 정보
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain1-business-value/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain1-business-value/01-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    생성형 AI 기본 개념
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain1-business-value/02-capabilities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    기능과 활용 (grounding, RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-ai-apps-services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-ai-apps-services/01-copilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft 365 Copilot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain2-ai-apps-services/02-foundry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft Foundry & Foundry Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domain 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-responsible-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Responsible AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 도입 계획
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI 도입 계획
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입은 기술이 아니라 변화 관리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adoption-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adoption team (도입 팀)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-champions-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Champions program (챔피언 프로그램)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-barriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입 장벽 (Common barriers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        데이터/보안/프라이버시/비용 영향
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        라이선스 및 구독 모델
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="라이선스 및 구독 모델">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-365-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft 365 Copilot 라이선스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foundry-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry Tools 구독 모델
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입 여정 개요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    참고
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    참고
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    용어집
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  
+
+  
+    
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입은 기술이 아니라 변화 관리
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adoption-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adoption team (도입 팀)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-champions-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Champions program (챔피언 프로그램)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-barriers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입 장벽 (Common barriers)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        데이터/보안/프라이버시/비용 영향
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        라이선스 및 구독 모델
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="라이선스 및 구독 모델">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsoft-365-copilot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microsoft 365 Copilot 라이선스
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#foundry-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Foundry Tools 구독 모델
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        도입 여정 개요
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        요약
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+        </div>
+      </div>
+    </div>
+  
+
+  <aside class="kakao-adfit-rail" aria-label="광고">
+    <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-oYnyqFed1jZhUtvA"
+      data-ad-width="160"
+      data-ad-height="600"></ins>
+  </aside>
+
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-adoption">AI 도입 계획 (Adoption)<a class="headerlink" href="#ai-adoption" title="Permanent link">&para;</a></h1>
+<h2 id="_1">도입은 기술이 아니라 변화 관리<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>AI 도입의 성패는 도구가 아니라 <strong>사람과 프로세스</strong> 에 달려 있습니다. 조직 전반에 확산하려면 체계적인 change management 가 필요합니다.</p>
+<h2 id="adoption-team">Adoption team (도입 팀)<a class="headerlink" href="#adoption-team" title="Permanent link">&para;</a></h2>
+<ul>
+<li>도입을 <strong>실행</strong>하는 팀 (거버넌스를 정하는 AI council 과 구분).</li>
+<li>역할: 파일럿 운영, 교육/온보딩, 유스케이스 발굴, 성공 측정, 피드백 수집.</li>
+<li>경영진 후원(sponsorship)과 현업 참여를 연결.</li>
+</ul>
+<h2 id="ai-champions-program">AI Champions program (챔피언 프로그램)<a class="headerlink" href="#ai-champions-program" title="Permanent link">&para;</a></h2>
+<p><strong>AI champions</strong> 는 각 부서의 얼리어답터/열성 사용자로, 동료의 도입을 돕습니다.</p>
+<ul>
+<li>부서 내 실제 유스케이스를 발굴하고 공유.</li>
+<li>동료 교육, 질문 응대, 모범 사례 전파.</li>
+<li>adoption team 과 현업 사이의 가교 역할.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">왜 효과적인가</p>
+<p>하향식 지시보다, 같은 부서 동료(champion)의 실제 사례와 지원이 저항을 줄이고 확산을 가속합니다.</p>
+</div>
+<h2 id="common-barriers">도입 장벽 (Common barriers)<a class="headerlink" href="#common-barriers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>장벽</th>
+<th>대응</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>신뢰 부족/두려움</strong></td>
+<td>안전성/데이터 보호 설명, 성공 사례 공유</td>
+</tr>
+<tr>
+<td><strong>기술 역량 부족</strong></td>
+<td>교육, prompt 가이드, champion 지원</td>
+</tr>
+<tr>
+<td><strong>명확한 유스케이스 부재</strong></td>
+<td>부서별 고가치 유스케이스 발굴</td>
+</tr>
+<tr>
+<td><strong>데이터 품질/접근 문제</strong></td>
+<td>데이터 정비, 권한 정리</td>
+</tr>
+<tr>
+<td><strong>거버넌스/보안 우려</strong></td>
+<td>정책 수립, responsible AI 원칙 적용</td>
+</tr>
+<tr>
+<td><strong>변화 저항</strong></td>
+<td>경영진 후원, champion, 점진적 확산</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">데이터/보안/프라이버시/비용 영향<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>도입 시 반드시 함께 검토할 영향:</p>
+<ul>
+<li><strong>데이터</strong>: Copilot 은 기존 <strong>권한 모델</strong>을 따르므로, 과도하게 공유된(over-shared) 데이터가 노출될 수 있음 -&gt; 사전 권한 정비 필요.</li>
+<li><strong>보안</strong>: 인증/인가, 감사 로그, shadow AI 차단.</li>
+<li><strong>프라이버시</strong>: 개인정보 처리 규정 준수, 데이터 거주(residency).</li>
+<li><strong>비용</strong>: 라이선스/토큰 비용, ROI 측정.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Over-sharing 위험</p>
+<p>Microsoft 365 Copilot 도입 전, SharePoint/OneDrive 등의 <strong>접근 권한 정비</strong>가 중요합니다. 사용자가 원래 볼 수 있던 데이터라면 Copilot 도 활용하므로, 과공유된 민감 데이터가 요약/검색으로 드러날 수 있습니다.</p>
+</div>
+<h2 id="_3">라이선스 및 구독 모델<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="microsoft-365-copilot">Microsoft 365 Copilot 라이선스<a class="headerlink" href="#microsoft-365-copilot" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>모델</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft 365 구독 포함</strong></td>
+<td>일부 Copilot 기능이 구독에 포함</td>
+</tr>
+<tr>
+<td><strong>월 구독 (per-user)</strong></td>
+<td>Microsoft 365 Copilot 을 사용자당 월 단위로 추가</td>
+</tr>
+<tr>
+<td><strong>Pay-as-you-go</strong></td>
+<td>사용량 기반 과금 (예: Copilot Studio 메시지, agent 사용)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="foundry-tools">Foundry Tools 구독 모델<a class="headerlink" href="#foundry-tools" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>모델</th>
+<th>설명</th>
+<th>적합 상황</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pay-as-you-go</strong></td>
+<td>사용한 만큼만 과금</td>
+<td>초기/변동 워크로드, PoC</td>
+</tr>
+<tr>
+<td><strong>Commitment tier</strong></td>
+<td>사전 약정으로 할인 단가</td>
+<td>대규모/예측 가능한 지속 사용</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">비용 최적화</p>
+<p>시작은 <strong>pay-as-you-go</strong> 로 사용량을 파악하고, 안정적으로 규모가 커지면 <strong>commitment tier</strong> 로 전환해 단가를 낮춥니다.</p>
+</div>
+<h2 id="_4">도입 여정 개요<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGRhdGEtZGlhZ3JhbS10eXBlPSJERVNDUklQVElPTiIgc3R5bGU9IndpZHRoOjg1MnB4O2hlaWdodDo0NDJweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB3aWR0aD0iODUycHgiIGhlaWdodD0iNDQycHgiIHZpZXdCb3g9IjAgMCA4NTIgNDQyIiB6b29tQW5kUGFuPSJtYWduaWZ5IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyI+PD9wbGFudHVtbCAxLjIwMjYuOGJldGExPz48ZGVmcy8+PGcgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGxlbmd0aEFkanVzdD0ic3BhY2luZyI+PCEtLWNsdXN0ZXIg7IaN64+EIOykkeyLrOydmCDqsoDspp0gKEZhc3QgVHJhY2spLS0+PGcgY2xhc3M9ImNsdXN0ZXIiIGRhdGEtcXVhbGlmaWVkLW5hbWU9Ii4uIC4uLiAuLiAuRmFzdCBUcmFjay4iIGlkPSJlbnQwMDAzIiBkYXRhLXNvdXJjZS1saW5lPSIxNiI+PHJlY3QgeD0iNTIyLjQzIiB5PSI3IiB3aWR0aD0iMjM0IiBoZWlnaHQ9IjEwMy42IiBmaWxsPSJub25lIiBzdHlsZT0ic3Ryb2tlOiM2MzY2RjE7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWRhc2hhcnJheTo3LDc7IiByeD0iNCIgcnk9IjQiLz48cGF0aCBkPSJNNzMyLjQyOSw3IEw3MzIuNDI5LDE2LjI5NyBMNzIyLjQyOSwyNi4yOTcgTDUyMi40MywyNi4yOTciIHN0eWxlPSJzdHJva2U6IzYzNjZGMTtzdHJva2Utd2lkdGg6MTtzdHJva2UtZGFzaGFycmF5OjcsNzsiIGZpbGw9Im5vbmUiLz48dGV4dCB4PSI1MjUuNDMiIHk9IjIwLjk5NSIgZmlsbD0iIzQzMzhDQSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTk5Ljk5OSIgZm9udC13ZWlnaHQ9IjcwMCI+7IaN64+EIOykkeyLrOydmCDqsoDspp0gKEZhc3QgVHJhY2spPC90ZXh0PjwvZz48IS0tY2x1c3RlciDsoITsgqwgU2NhbGUtdXAgJiDssrTqs4TtmZQtLT48ZyBjbGFzcz0iY2x1c3RlciIgZGF0YS1xdWFsaWZpZWQtbmFtZT0iLi4gU2NhbGUtdXAgLiAuLi4iIGlkPSJlbnQwMDA1IiBkYXRhLXNvdXJjZS1saW5lPSIyMCI+PHJlY3QgeD0iMjU5LjQzIiB5PSIxNTkuNiIgd2lkdGg9IjQ1OCIgaGVpZ2h0PSIyNjguNzgiIGZpbGw9Im5vbmUiIHN0eWxlPSJzdHJva2U6IzYzNjZGMTtzdHJva2Utd2lkdGg6MTtzdHJva2UtZGFzaGFycmF5OjcsNzsiIHJ4PSI0IiByeT0iNCIvPjxwYXRoIGQ9Ik00MjguNTgzLDE1OS42IEw0MjguNTgzLDE2OC44OTcgTDQxOC41ODMsMTc4Ljg5NyBMMjU5LjQzLDE3OC44OTciIHN0eWxlPSJzdHJva2U6IzYzNjZGMTtzdHJva2Utd2lkdGg6MTtzdHJva2UtZGFzaGFycmF5OjcsNzsiIGZpbGw9Im5vbmUiLz48dGV4dCB4PSIyNjIuNDMiIHk9IjE3My41OTUiIGZpbGw9IiM0MzM4Q0EiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjE1OS4xNTMiIGZvbnQtd2VpZ2h0PSI3MDAiPuyghOyCrCBTY2FsZS11cCAmYW1wOyDssrTqs4TtmZQ8L3RleHQ+PC9nPjwhLS1lbnRpdHkgQy0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtcXVhbGlmaWVkLW5hbWU9Ii4uIC4uLiAuLiAuRmFzdCBUcmFjay4uQyIgaWQ9ImVudDAwMDQiIGRhdGEtc291cmNlLWxpbmU9IjE3Ij48cmVjdCB4PSI1MzguNzciIHk9IjQyIiB3aWR0aD0iMjAxLjMyMSIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNGNUYzRkYiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iNTQ4Ljc3IiB5PSI2NC45OTUiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9Ijg2LjY1OCI+My4g7YyM7J2865+/IOqygOymnTwvdGV4dD48dGV4dCB4PSI1NDguNzciIHk9IjgxLjI5MiIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTgxLjMyMSI+KOy1nOyGjCDrnbzsnbTshKDsiqQgJmFtcDsg642w7J207YSwIO2ZnOyaqSk8L3RleHQ+PC9nPjwhLS1lbnRpdHkgRC0tPjxnIGNsYXNzPSJlbnRpdHkiIGRhdGEtcXVhbGlmaWVkLW5hbWU9Ii4uIFNjYWxlLXVwIC4gLi4uLkQiIGlkPSJlbnQwMDA2IiBkYXRhLXNvdXJjZS1saW5lPSIyMSI+PHJlY3QgeD0iNDA5LjIiIHk9IjE5NC42IiB3aWR0aD0iMTYwLjQ2MSIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNFRUYyRkYiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iNDE5LjIiIHk9IjIxNy41OTUiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjExNi44NjgiPjQuIOq4sOuwmCDsnbjtlITrnbwg7ZmV7J6lPC90ZXh0Pjx0ZXh0IHg9IjQxOS4yIiB5PSIyMzMuODkyIiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIxNDAuNDYxIj4o7KCE7IKsIOuNsOydtO2EsC/qtoztlZwg7KCV67mEKTwvdGV4dD48L2c+PCEtLWVudGl0eSBFLS0+PGcgY2xhc3M9ImVudGl0eSIgZGF0YS1xdWFsaWZpZWQtbmFtZT0iLi4gU2NhbGUtdXAgLiAuLi4uRSIgaWQ9ImVudDAwMDciIGRhdGEtc291cmNlLWxpbmU9IjIyIj48cmVjdCB4PSIyNzUuNzUiIHk9IjI3Ny4xOSIgd2lkdGg9IjE3My4zNzEiIGhlaWdodD0iNTIuNTk0IiBmaWxsPSIjRURFOUZFIiBzdHlsZT0ic3Ryb2tlOiM0MzM4Q0E7c3Ryb2tlLXdpZHRoOjAuNTsiIHJ4PSI0IiByeT0iNCIvPjx0ZXh0IHg9IjI4NS43NSIgeT0iMzAwLjE4NSIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTE5LjM1NSI+NS4g67OA7ZmUIOq0gOumrCAmYW1wOyDqtZDsnKE8L3RleHQ+PHRleHQgeD0iMjg1Ljc1IiB5PSIzMTYuNDgyIiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIxNTMuMzcxIj4oQ2hhbXBpb25zIFByb2dyYW0pPC90ZXh0PjwvZz48IS0tZW50aXR5IEYtLT48ZyBjbGFzcz0iZW50aXR5IiBkYXRhLXF1YWxpZmllZC1uYW1lPSIuLiBTY2FsZS11cCAuIC4uLi5GIiBpZD0iZW50MDAwOCIgZGF0YS1zb3VyY2UtbGluZT0iMjMiPjxyZWN0IHg9IjI3OS44OCIgeT0iMzU5Ljc5IiB3aWR0aD0iMTY1LjExNSIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNFMEU3RkYiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iMjg5Ljg4IiB5PSIzODIuNzg1IiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIxNDUuMTE1Ij42LiDqsIDsuZgg7Lih7KCVICZhbXA7IOuqqOuLiO2EsOungTwvdGV4dD48dGV4dCB4PSIyODkuODgiIHk9IjM5OS4wODIiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjE0My43NiI+KFJPSSDtj4nqsIAsIO2UvOuTnOuwsSDro6jtlIQpPC90ZXh0PjwvZz48IS0tZW50aXR5IEEtLT48ZyBjbGFzcz0iZW50aXR5IiBkYXRhLXF1YWxpZmllZC1uYW1lPSJBIiBpZD0iZW50MDAwMSIgZGF0YS1zb3VyY2UtbGluZT0iMTMiPjxyZWN0IHg9IjciIHk9IjQyIiB3aWR0aD0iMTM2Ljg2OCIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNFRUYyRkYiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iMTciIHk9IjY0Ljk5NSIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTE2Ljg2OCI+MS4g7KCE6561IOuwjyDqsbDrsoTrhIzsiqQ8L3RleHQ+PHRleHQgeD0iMTciIHk9IjgxLjI5MiIgZmlsbD0iIzMxMkU4MSIgZm9udC1zaXplPSIxNCIgdGV4dExlbmd0aD0iMTEwLjg1NCI+KEFJIENvdW5jaWwg7IiY66a9KTwvdGV4dD48L2c+PCEtLWVudGl0eSBCLS0+PGcgY2xhc3M9ImVudGl0eSIgZGF0YS1xdWFsaWZpZWQtbmFtZT0iQiIgaWQ9ImVudDAwMDIiIGRhdGEtc291cmNlLWxpbmU9IjE0Ij48cmVjdCB4PSIyNDMuNTgiIHk9IjQyIiB3aWR0aD0iMTY3LjY5OSIgaGVpZ2h0PSI1Mi41OTQiIGZpbGw9IiNFREU5RkUiIHN0eWxlPSJzdHJva2U6IzQzMzhDQTtzdHJva2Utd2lkdGg6MC41OyIgcng9IjQiIHJ5PSI0Ii8+PHRleHQgeD0iMjUzLjU4IiB5PSI2NC45OTUiIGZpbGw9IiMzMTJFODEiIGZvbnQtc2l6ZT0iMTQiIHRleHRMZW5ndGg9IjExOS4zNTUiPjIuIOqzvOygnCDrsJzqtbQgJmFtcDsg6riw7ZqNPC90ZXh0Pjx0ZXh0IHg9IjI1My41OCIgeT0iODEuMjkyIiBmaWxsPSIjMzEyRTgxIiBmb250LXNpemU9IjE0IiB0ZXh0TGVuZ3RoPSIxNDcuNjk5Ij4oQWRvcHRpb24gVGVhbSDqtazshLEpPC90ZXh0PjwvZz48IS0tbGluayBBIHRvIEItLT48ZyBjbGFzcz0ibGluayIgZGF0YS1lbnRpdHktMT0iZW50MDAwMSIgZGF0YS1lbnRpdHktMj0iZW50MDAwMiIgaWQ9ImxuazkiIGRhdGEtc291cmNlLWxpbmU9IjI3IiBkYXRhLWxpbmstdHlwZT0iZGVwZW5kZW5jeSI+PHBhdGggZD0iTTE0NC4yOSw2OC4zIEMxNzQuOSw2OC4zIDIwNi4yLDY4LjMgMjM4LjM5LDY4LjMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiIGZpbGw9Im5vbmUiIGlkPSJBLXRvLUIiLz48cG9seWdvbiBwb2ludHM9IjI0My4zOSw2OC4zLDIzNC4zOSw2NC4zLDIzOC4zOSw2OC4zLDIzNC4zOSw3Mi4zLDI0My4zOSw2OC4zIiBmaWxsPSIjMTgxODE4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIvPjx0ZXh0IHg9IjE2Mi4yMyIgeT0iNjEuMzY3IiBmaWxsPSIjMDAwIiBmb250LXNpemU9IjEzIiB0ZXh0TGVuZ3RoPSI2My45MzIiPuuwqe2WpeyEsSDsoJzsi5w8L3RleHQ+PC9nPjwhLS1saW5rIEIgdG8gQy0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJlbnQwMDAyIiBkYXRhLWVudGl0eS0yPSJlbnQwMDA0IiBpZD0ibG5rMTAiIGRhdGEtc291cmNlLWxpbmU9IjI4IiBkYXRhLWxpbmstdHlwZT0iZGVwZW5kZW5jeSI+PHBhdGggZD0iTTQxMS40NSw2OC4zIEM0NTAuNTMsNjguMyA0OTIuMzIsNjguMyA1MzMuMzIsNjguMyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxOyIgZmlsbD0ibm9uZSIgaWQ9IkItdG8tQyIvPjxwb2x5Z29uIHBvaW50cz0iNTM4LjMyLDY4LjMsNTI5LjMyLDY0LjMsNTMzLjMyLDY4LjMsNTI5LjMyLDcyLjMsNTM4LjMyLDY4LjMiIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PHRleHQgeD0iNDI5LjUzIiB5PSI2MS4zNjciIGZpbGw9IiMwMDAiIGZvbnQtc2l6ZT0iMTMiIHRleHRMZW5ndGg9IjkxLjk4NSI+7YyM7J2865+/IO2DgOqynyDshKDsoJU8L3RleHQ+PC9nPjwhLS1saW5rIEMgdG8gRC0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJlbnQwMDA0IiBkYXRhLWVudGl0eS0yPSJlbnQwMDA2IiBpZD0ibG5rMTEiIGRhdGEtc291cmNlLWxpbmU9IjMxIiBkYXRhLWxpbmstdHlwZT0iZGVwZW5kZW5jeSI+PHBhdGggZD0iTTYxMy45OSw5NC44NSBDNTg2LjQxLDEyMi41NCA1NDYuMTY5LDE2Mi45MzggNTE4LjUyOSwxOTAuNjc4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiBmaWxsPSJub25lIiBpZD0iQy10by1EIi8+PHBvbHlnb24gcG9pbnRzPSI1MTUsMTk0LjIyLDUyNC4xODYsMTkwLjY2OCw1MTguNTI5LDE5MC42NzgsNTE4LjUxOSwxODUuMDIxLDUxNSwxOTQuMjIiIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PHRleHQgeD0iNTgyLjQzIiB5PSIxMzkuNjY3IiBmaWxsPSIjMDAwIiBmb250LXNpemU9IjEzIiB0ZXh0TGVuZ3RoPSIyNTQuMzUiPlvqsoDspp0g7JmE66OMXSDsoITsgqwg7KCE6rCcIOqysOygleydhCDthrXtlZwg64yA6rec66qoIO2IrOyekDwvdGV4dD48L2c+PCEtLWxpbmsgRCB0byBFLS0+PGcgY2xhc3M9ImxpbmsiIGRhdGEtZW50aXR5LTE9ImVudDAwMDYiIGRhdGEtZW50aXR5LTI9ImVudDAwMDciIGlkPSJsbmsxMiIgZGF0YS1zb3VyY2UtbGluZT0iMzQiIGRhdGEtbGluay10eXBlPSJkZXBlbmRlbmN5Ij48cGF0aCBkPSJNNDQ4LjksMjQ3LjYyIEM0MzQuMjQsMjU2LjkyIDQyMS45MTIsMjY0Ljc1MSA0MDcuMjQyLDI3NC4wNjEiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiIGZpbGw9Im5vbmUiIGlkPSJELXRvLUUiLz48cG9seWdvbiBwb2ludHM9IjQwMy4wMiwyNzYuNzQsNDEyLjc2MiwyNzUuMjk1LDQwNy4yNDIsMjc0LjA2MSw0MDguNDc2LDI2OC41NCw0MDMuMDIsMjc2Ljc0IiBmaWxsPSIjMTgxODE4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwOyIvPjwvZz48IS0tbGluayBFIHRvIEYtLT48ZyBjbGFzcz0ibGluayIgZGF0YS1lbnRpdHktMT0iZW50MDAwNyIgZGF0YS1lbnRpdHktMj0iZW50MDAwOCIgaWQ9ImxuazEzIiBkYXRhLXNvdXJjZS1saW5lPSIzNSIgZGF0YS1saW5rLXR5cGU9ImRlcGVuZGVuY3kiPjxwYXRoIGQ9Ik0zNjIuNDMsMzI5Ljk5IEMzNjIuNDMsMzM5LjQgMzYyLjQzLDM0NS4wNSAzNjIuNDMsMzU0LjQ3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjE7IiBmaWxsPSJub25lIiBpZD0iRS10by1GIi8+PHBvbHlnb24gcG9pbnRzPSIzNjIuNDMsMzU5LjQ3LDM2Ni40MywzNTAuNDcsMzYyLjQzLDM1NC40NywzNTguNDMsMzUwLjQ3LDM2Mi40MywzNTkuNDciIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PC9nPjwhLS1yZXZlcnNlIGxpbmsgRCB0byBGLS0+PGcgY2xhc3M9ImxpbmsiIGRhdGEtZW50aXR5LTE9ImVudDAwMDYiIGRhdGEtZW50aXR5LTI9ImVudDAwMDgiIGlkPSJsbmsxNSIgZGF0YS1zb3VyY2UtbGluZT0iMzYiIGRhdGEtbGluay10eXBlPSJkZXBlbmRlbmN5Ij48cGF0aCBkPSJNNDg0LjEwOCwyNTIuMjQgQzQ3OS4xMDgsMjc1LjcxIDQ2OS45MywzMDUuNTkgNDUwLjQzLDMyOS43OSBDNDQxLjA0LDM0MS40NSA0MjguNDgsMzUxLjM2IDQxNS44MSwzNTkuNDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtZGFzaGFycmF5OjcsNzsiIGZpbGw9Im5vbmUiIGlkPSJELWJhY2t0by1GIi8+PHBvbHlnb24gcG9pbnRzPSI0ODUuMTUsMjQ3LjM1LDQ3OS4zNjMsMjU1LjMxOSw0ODQuMTA4LDI1Mi4yNCw0ODcuMTg3LDI1Ni45ODYsNDg1LjE1LDI0Ny4zNSIgZmlsbD0iIzE4MTgxOCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDsiLz48dGV4dCB4PSI0NzcuNDMiIHk9IjMwOC4wNTciIGZpbGw9IiMwMDAiIGZvbnQtc2l6ZT0iMTMiIHRleHRMZW5ndGg9IjIxMC4yMDUiPlvsg4Hsi5wg6rCc7ISgXSDsg4jroZzsmrQg7ZiE7JeFIOyalOq1rOyCrO2VrSDrsJjsmIE8L3RleHQ+PC9nPjwhLS1saW5rIEYgdG8gQS0tPjxnIGNsYXNzPSJsaW5rIiBkYXRhLWVudGl0eS0xPSJlbnQwMDA4IiBkYXRhLWVudGl0eS0yPSJlbnQwMDAxIiBpZD0ibG5rMTYiIGRhdGEtc291cmNlLWxpbmU9IjM5IiBkYXRhLWxpbmstdHlwZT0iZGVwZW5kZW5jeSI+PHBhdGggZD0iTTMwMi42NSwzNTkuNDMgQzI4Ny4zLDM1MS4yNiAyNzEuNDYsMzQxLjI5IDI1OC40MywzMjkuNzkgQzE3Ny44NywyNTguNjIgMTE2LjM4MywxNDkuNjczIDkwLjM4Myw5OS4zMDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTsiIGZpbGw9Im5vbmUiIGlkPSJGLXRvLUEiLz48cG9seWdvbiBwb2ludHM9Ijg4LjA5LDk0Ljg2LDg4LjY2NCwxMDQuNjkyLDkwLjM4Myw5OS4zMDMsOTUuNzczLDEwMS4wMjMsODguMDksOTQuODYiIGZpbGw9IiMxODE4MTgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Ii8+PHRleHQgeD0iMTgxLjQzIiB5PSIyMjUuNDY3IiBmaWxsPSIjMDAwIiBmb250LXNpemU9IjEzIiB0ZXh0TGVuZ3RoPSIxODIuMTUzIj7ruYTspojri4jsiqQg7J6E7Yyp7Yq4IOuztOqzoCAo7KCE6561IOyImOyglSk8L3RleHQ+PC9nPjw/cGxhbnR1bWwtc3JjIFJMRFZKemZHNTdfbGZwWkhQRERhaTI3QXQxd004RDM0YnNxUGxjcnhRQTBlNExqSThDallKNTNsM0RDUU5HT1JrZThPYlNkMmFpZ1YzSEVOVlBfVVV4XzNwaEtENEJFZGZsVlN5X2p0cGlzamZoTWlPWVhoYTVISklZNkpidEtqX3JuUEtvNmtRM2JWTjNOSUFJYXRsNkplMUlzUHEwckRETTEtXzVuRHYxTGpFUUYya2hJVzZxZExZRVdQdE8zOXNNMW1GZzU4MGpLeDJHUGNyRmMwajM3TWRKODR1UHRFSzMwS0lXTXlpdFotRk04ZGJUb0FjWG03eS0wdDk2Y2FPMkJXMXpPV2pEdTdRWC0wU3NOSjNnNzRQQmxkUnhJZnkyOTRxNEdZZEc1TWdqQmNkLWE5Szc4R1hpYk9KOXdIdk42VzZKeXV0SGxNaTEzOFNsZXprMFZFbUVSNy1tOGRnTVZwUUxzMzlIS1RFRnFzOHJTa3IwOTJITURGdjlXYWtTT2NzQ3UtRkkzMHBaLW5sSlFoTFM3ZjU1Y3AxYkVvYWlsM2FnNGFMaDVyVlBtd3cwVGtjZ25zR3FfLVVqVUhiRktqamNDMmhUc21NZS1IMWJmMkpOSlZuYnpFUkUxNzVaamtrSjhZQzJkRm9LNXFqMzRJcVkxaWdtdG5YOTlIVk9LaXpoOUVwLWFJVmJJLW1wX2g1clFmTkdMTTZfMG9HS2Y0aHgzd1hQM1htV252N3BnX0o1d25DRktBbElPa1ZWSF9XU3h2V05RQm8wUEVocVlSUkg1ZV92MVBmbVdRTUw3TWlYWGUzYnVRLVpCZ1RONVltcEo3UzRBZXBZd29Rckd0RTRMTTRTQUZJeGZOR1o3cS1vUVlsTmduMkZwVzh6dncwQm55R3B6UnJCdTJVZFE5TmJuVzZPNFZuSHd4LVRtN05aa2FKSThpdTgyYUNGWUN6RjlBdGxTQ25fYUtuel9ZTm92bW1iWXRzOXViQk9wZzRRb0ZIaU10WXF4ZDFDSGk2ZkxSdDY0OXN2cms3X1d0V1k0Q2Q0eEIycklBVzItZmx6Q0dBdWZPaHh0Yk80VTRkZmJsbUdpUkZ1dmp1SWhPam44OXk5cy1vOW9RSFVVdFhVdzFiemdpVllXdWxITzFsc0x4ZmdOZUk3OUNZZXItUDRhNlZvN2h6elpQellPUW43V2p6ODNpc29Md1lhbEwwcnVieEVpN09DVGJpVW5SUkx4dllSYktNTkxKSzh3X0NqNjBJcHdDN0djRzlvbm9sMlFpTVM4dllTTGJUU0JENWp5VE8xb3VYMHNPeWJ1amxhbHFFRnFGPz48L2c+PC9zdmc+" class="uml" alt="uml diagram" title="" /></p>
+<h2 id="_5">요약<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>AI council</strong> = 전략/거버넌스, <strong>adoption team</strong> = 실행, <strong>champions</strong> = 부서 확산.</li>
+<li>도입 전 <strong>데이터 권한 정비</strong>(over-sharing 방지)가 핵심.</li>
+<li>Copilot 라이선스: 구독 포함 / 월 구독 / pay-as-you-go.</li>
+<li>Foundry Tools: <strong>pay-as-you-go</strong> 로 시작, 규모가 크면 <strong>commitment tier</strong>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">출처</p>
+<ul>
+<li><a href="https://adoption.microsoft.com/en-us/copilot/" target="_blank" rel="noopener">Microsoft Copilot Adoption - Adoption planning</a></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-enablement-resources" target="_blank" rel="noopener">Microsoft Learn - Microsoft 365 Copilot adoption guide</a></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-setup" target="_blank" rel="noopener">Microsoft Learn - Get ready for Microsoft 365 Copilot</a></li>
+<li><a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/which-copilot-for-your-organization" target="_blank" rel="noopener">Microsoft Learn - Microsoft 365 Copilot licensing options</a></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+  
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../01-responsible-ai/" class="md-footer__link md-footer__link--prev" aria-label="이전: Responsible AI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                Responsible AI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="다음: 용어집">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                용어집
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+  <div class="kakao-adfit-mobile" aria-label="광고">
+    <ins class="kakao_ad_area" style="display:none;"
+      data-ad-unit="DAN-zHXbzhtivpd6MTA0"
+      data-ad-width="250"
+      data-ad-height="250"></ins>
+  </div>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "header.autohide", "content.code.copy", "content.tooltips", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  <script src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+
+  </body>
+</html>
